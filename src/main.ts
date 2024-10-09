@@ -1,19 +1,15 @@
 import { readFile } from "node:fs/promises";
-import { fileURLToPath } from "node:url";
-
 import {
   getInput,
   setFailed,
 } from "@actions/core";
 import { issueCommand } from "@actions/core/lib/command"
-
 import type { ProblemMatcherDocument } from "github-actions-problem-matcher-typings";
 
 export async function run(): Promise<void> {
   try {
     const action = getInput("action");
-
-    const matcherFile = fileURLToPath(new URL("problem-matcher.json", import.meta.url));
+    const matcherFile = `${new URL("problem-matcher.json", import.meta.url)}`;
 
     switch (action) {
       case "add":
