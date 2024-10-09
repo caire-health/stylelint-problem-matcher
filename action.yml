@@ -1,7 +1,5 @@
 name: "Problem Matcher for stylelint"
-
 description: "Sets up a problem matcher for stylelint that's used to create annotations for violations"
-
 author: "xt0rted"
 
 branding:
@@ -15,5 +13,5 @@ inputs:
     default: add
 
 runs:
-  using: "node16"
+  using: "node20"
   main: "dist/index.js"
