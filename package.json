@@ -27,6 +27,18 @@
   "dependencies": {
     "@actions/core": "^1.11.1"
   },
+  "//overrides": [
+    "js-yaml >=3.15.2: CVE-2026-84375, GHSA-5p4m-2wfm-xmqj, CVE-2026-59869, CVE-2026-53550",
+    "browserslist >=4.29.0: CVE-2026-73088",
+    "brace-expansion >=1.1.16: CVE-2026-13149",
+    "@babel/core >=7.29.1 <8: CVE-2026-49356 (capped at 7.x — babel-plugin-istanbul requires ^7)"
+  ],
+  "overrides": {
+    "js-yaml": ">=3.15.2",
+    "browserslist": ">=4.29.0",
+    "brace-expansion": ">=1.1.16",
+    "@babel/core": ">=7.29.1 <8.0.0"
+  },
   "devDependencies": {
     "@types/jest": "^28.1.7",
     "@types/node": "^20.14.11",
